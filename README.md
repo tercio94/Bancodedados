@@ -1,12 +1,12 @@
 # Banco de Dados com DBeaver e Heroku.
 
-1. Primeiro criar um New App no Heroku, ir na opção Resources e no campo Add-ons adicionar Heroku Postgres.
+#### 1. Primeiro criar um New App no Heroku, ir na opção Resources e no campo Add-ons adicionar Heroku Postgres.
 
-2. Dentro de Heroku Postgres ir em Settings e View Credentials para pegar os dados de acesso que irão conectar com o Dbeaver.
+#### 2. Dentro de Heroku Postgres ir em Settings e View Credentials para pegar os dados de acesso que irão conectar com o Dbeaver.
 
-3. No Dbeaver ir na opção New Database Connection e selecionar a opção PostgreSQL, usar as credenciais do Heroku para conectar.
+#### 3. No Dbeaver ir na opção New Database Connection e selecionar a opção PostgreSQL, usar as credenciais do Heroku para conectar.
 
-4. Ir na aba New SQL Editor para criar tabelas e colunas usando os códigos abaixo:
+#### 4. Ir na aba New SQL Editor para criar tabelas e colunas usando os códigos abaixo:
 
 ```
 create table tbl_cliente (
@@ -36,7 +36,7 @@ create table tbl_pedido (
 
 	
 	
-5. Inserindo informações dentro das colunas criadas em cada tabela com os códigos abaixo:
+#### 5. Inserindo informações dentro das colunas criadas em cada tabela com os códigos abaixo:
 
 ```
 insert into tbl_cliente(codcliente, nome, datanasc, genero, email) values 
