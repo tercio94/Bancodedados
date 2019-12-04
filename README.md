@@ -1,13 +1,14 @@
 # Banco de Dados com DBeaver e Heroku.
 
-1 - Primeiro criar um New App no Heroku, ir na opção Resources e no campo Add-ons adicionar Heroku Postgres.
+1. Primeiro criar um New App no Heroku, ir na opção Resources e no campo Add-ons adicionar Heroku Postgres.
 
-2 - Dentro de Heroku Postgres ir em Settings e View Credentials para pegar os dados de acesso que irão conectar com o Dbeaver.
+2. Dentro de Heroku Postgres ir em Settings e View Credentials para pegar os dados de acesso que irão conectar com o Dbeaver.
 
-3 - No Dbeaver ir na opção New Database Connection e selecionar a opção PostgreSQL, usar as credenciais do Heroku para conectar.
+3. No Dbeaver ir na opção New Database Connection e selecionar a opção PostgreSQL, usar as credenciais do Heroku para conectar.
 
-4 - Ir na aba New SQL Editor para criar tabelas e colunas usando os códigos abaixo:
+4. Ir na aba New SQL Editor para criar tabelas e colunas usando os códigos abaixo:
 
+```
 create table tbl_cliente (
 	CodCliente integer CONSTRAINT pk_CodCliente primary key, -- 
 	nome varchar(50) not null, -- 
@@ -30,11 +31,14 @@ create table tbl_pedido (
 	fk_CodCliente integer references tbl_cliente(CodCliente),
 	fk_CodProduto integer references tbl_produto(CodProduto)
 	);
+```	
+	
 
 	
 	
-5 - Inserindo informações dentro das colunas criadas em cada tabela com os códigos abaixo:
+5. Inserindo informações dentro das colunas criadas em cada tabela com os códigos abaixo:
 
+```
 insert into tbl_cliente(codcliente, nome, datanasc, genero, email) values 
         (1, 'Tercio Rodrigues', '1994-03-25', 'M', 'tercio25@gmail.com'),
         (2, 'Gabriela Amaral', '1993-02-23', 'F', 'gabriela@gmail.com'),
@@ -55,13 +59,15 @@ insert into tbl_produto(codproduto, nome_produto, descrição, estoque, valor) v
         (7, 'Mouse', 'Mouse sem fio', '22', '259'),
         (8, 'Fone', 'Fone com fio', '199', '99');
  
-
 insert into tbl_pedido(codpedido, fk_codcliente, fk_codproduto, totalpedido) values
 	(1,1,2,'50'),
 	(2,2,2,'50'),
 	(3,3,4,'50'),
 	(4,4,5,'50'),
 	(5,5,1,'50');
+```	
+	
+	
 
 
 
