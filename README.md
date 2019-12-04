@@ -66,6 +66,28 @@ insert into tbl_pedido(codpedido, fk_codcliente, fk_codproduto, totalpedido) val
 	(4,4,5,'50'),
 	(5,5,1,'50');
 ```	
+
+#### 6. Comandos para editar, adicionar e deletar tabelas:
+
+```
+ALTER TABLE table_name
+ADD COLUMN new_columm_name date_type;
+
+alter table tbl_cliente add column CPF varchar(50);
+
+alter table tbl_produto add column descricao text;
+
+ALTER TABLE table_name
+ALTER COLUMN column_name [SET DATA] TYPE new_data_type;
+
+ALTER TABLE table_name
+DROP COLUMN IF EXISTS column_name;
+
+insert into table(column1, column2,...)
+values
+ (value1, value2,...);
+ ```
+
 	
 	
 
