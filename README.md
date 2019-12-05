@@ -60,11 +60,14 @@ insert into tbl_produto(codproduto, nome_produto, descrição, estoque, valor) v
         (8, 'Fone', 'Fone com fio', '199', '99');
  
 insert into tbl_pedido(codpedido, fk_codcliente, fk_codproduto, totalpedido) values
-	(1,1,2,'50'),
-	(2,2,2,'50'),
-	(3,3,4,'50'),
-	(4,4,5,'50'),
-	(5,5,1,'50');
+	(1,1,2,'99'),
+	(2,2,3,'99'),
+	(3,3,4,'99'),
+	(4,4,5,'99'),
+	(5,5,1,'99');
+	(6,6,4,'99'),
+	(7,7,5,'99'),
+	(8,8,1,'99');
 ```	
 
 #### 6. Comandos para adicionar, editar, deletar e atualizar:
