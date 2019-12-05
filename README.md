@@ -67,7 +67,7 @@ insert into tbl_pedido(codpedido, fk_codcliente, fk_codproduto, totalpedido) val
 	(5,5,1,'50');
 ```	
 
-#### 6. Comandos para editar, adicionar e deletar tabelas:
+#### 6. Comandos para adicionar, editar, deletar e atualizar:
 
 Adicionar nova coluna a tabela:
 ```
@@ -78,23 +78,48 @@ ALTER TABLE tbl_cliente
 ADD COLUMN CPF varchar(50);
 ```
 
-Alterar tipo o tipo da coluna:
+Alterar o tipo da coluna:
 ```
 ALTER TABLE table_name
 ALTER COLUMN column_name TYPE new_data_type;
 
 ALTER TABLE tbl_cliente
-ALTER column nome TYPE varchar(40);
+ALTER COLUMN nome TYPE varchar(40);
+```
+
+Deletar uma coluna ou tabela:
+```
+ALTER TABLE table_name
+DROP COLUMN column_name;
+
+ALTER TABLE tbl_cliente
+DROP COLUMN CPF;
+
+DROP TABLE table_name;
+
+DROP TABLE tbl_cliente;
+```
+
+Atualizar dados dentro de uma coluna:
+```
+update tbl_cliente
+set nome = 'Gabriela Nascimento'
+where
+	codcliente = 2;
+```
+
+Selecionar dados dentro de uma tabela ou coluna:
+```
+select * from tbl_cliente
+where codcliente = 2;
+
+select * from tbl_cliente
+WHERE genero ='M' AND nome LIKE 'Terc%';
 ```
 
 
 
 
-ALTER TABLE table_name
-ALTER COLUMN column_name [SET DATA] TYPE new_data_type;
-
-ALTER TABLE table_name
-DROP COLUMN IF EXISTS column_name;
 
 
 
