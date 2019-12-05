@@ -69,13 +69,26 @@ insert into tbl_pedido(codpedido, fk_codcliente, fk_codproduto, totalpedido) val
 
 #### 6. Comandos para editar, adicionar e deletar tabelas:
 
+Adicionar nova coluna a tabela:
 ```
 ALTER TABLE table_name
 ADD COLUMN new_columm_name date_type;
 
-alter table tbl_cliente add column CPF varchar(50);
+ALTER TABLE tbl_cliente
+ADD COLUMN CPF varchar(50);
+```
 
-alter table tbl_produto add column descricao text;
+Alterar tipo o tipo da coluna:
+```
+ALTER TABLE table_name
+ALTER COLUMN column_name TYPE new_data_type;
+
+ALTER TABLE tbl_cliente
+ALTER column nome TYPE varchar(40);
+```
+
+
+
 
 ALTER TABLE table_name
 ALTER COLUMN column_name [SET DATA] TYPE new_data_type;
@@ -83,10 +96,7 @@ ALTER COLUMN column_name [SET DATA] TYPE new_data_type;
 ALTER TABLE table_name
 DROP COLUMN IF EXISTS column_name;
 
-insert into table(column1, column2,...)
-values
- (value1, value2,...);
- ```
+
 
 	
 	
